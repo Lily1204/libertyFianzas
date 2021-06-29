@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+}
+.title {
+  font-size: 20px;
+}
+
+.table-container {
+  height: 200px;
+  overflow: auto;
+  width: 400px;
+}
+
+.mat-row:nth-child(even) {
+  background-color: #e3f4f7;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: rgb(249, 249, 250);
+}

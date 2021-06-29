@@ -1,0 +1,27 @@
+<div fxLayout="column" class="mat-elevation-z8">
+  <div class="title" fxLayoutAlign="center center">Próximas a vencer</div>
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource">
+      <!-- Date Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Fecha</th>
+        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      </ng-container>
+
+      <!-- bail Column -->
+      <ng-container matColumnDef="bail">
+        <th mat-header-cell *matHeaderCellDef>Fianza</th>
+        <td mat-cell *matCellDef="let element">{{ element.bail }}</td>
+      </ng-container>
+
+      <!-- amount Column -->
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>Importe</th>
+        <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div fxLayout="column" class="mat-elevation-z8 container">
+  <div class="table-container" ngClass.gt-lg="responsive-container">
+    <table mat-table [dataSource]="dataSource">
+      <!-- fianza Column -->
+      <ng-container matColumnDef="fianza">
+        <th mat-header-cell *matHeaderCellDef>Fianza</th>
+        <td mat-cell *matCellDef="let element">{{ element.fianza }}</td>
+      </ng-container>
+
+      <!-- movimiento Column -->
+      <ng-container matColumnDef="movimiento">
+        <th mat-header-cell *matHeaderCellDef>Movimiento</th>
+        <td mat-cell *matCellDef="let element">{{ element.movimiento }}</td>
+      </ng-container>
+
+      <!-- fiado Column -->
+
+      <ng-container matColumnDef="fiado">
+        <th mat-header-cell *matHeaderCellDef>Fiado</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.fiado }}
+        </td>
+      </ng-container>
+
+      <!-- antiguedad Column -->
+      <ng-container matColumnDef="antiguedad">
+        <th mat-header-cell *matHeaderCellDef>Antiguedad</th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          [ngClass]="{
+            'make-red': element.color == 'rojo',
+            'make-yellow': element.color == 'amarillo',
+            'make-green': element.color == 'verde'
+          }"
+        >
+          {{ element.antiguedad }}
+        </td>
+      </ng-container>
+
+      <!-- diasVencimiento Column -->
+      <ng-container matColumnDef="diasVencimiento">
+        <th mat-header-cell *matHeaderCellDef>Días de Vencimiento</th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          [ngClass]="{
+            'make-red': element.color == 'rojo',
+            'make-yellow': element.color == 'amarillo',
+            'make-green': element.color == 'verde'
+          }"
+        >
+          {{ element.diasVencimiento }}
+        </td>
+      </ng-container>
+
+      <!-- importe Column -->
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef>importe</th>
+        <td mat-cell *matCellDef="let element">{{ element.importe }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

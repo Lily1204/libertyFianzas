@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+.container {
+  padding: 15px;
+}
+.table-container {
+  height: 200px;
+  overflow: auto;
+}
+.responsive-container {
+  height: 500px;
+  overflow: auto;
+}
+.make-yellow {
+  background-color: rgb(226, 226, 36);
+}
+.make-green {
+  background-color: #49c220;
+}
+.make-red {
+  background-color: red;
+}

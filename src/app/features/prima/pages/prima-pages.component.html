@@ -1,0 +1,23 @@
+<div fxLayout="column">
+  <h1 fxLayoutAlign="center center">Prima por cobrar</h1>
+
+  <div fxLayout="column" fxLayoutGap="50px">
+    <div
+      fxLayoutAlign="space-around center"
+      fxLayout="row"
+      style="overflow: auto"
+      fxLayout.lt-md="column"
+    >
+      <div fxLayout="row" fxLayoutGap="50px">
+        <prima-card [type]="'Pesos'"></prima-card>
+        <prima-card [type]="'Dolares'"></prima-card>
+      </div>
+      <div>
+        <next-expiration-list></next-expiration-list>
+      </div>
+    </div>
+    <div class="container-list">
+      <prima-list [dataSource]="dataSource"></prima-list>
+    </div>
+  </div>
+</div>
